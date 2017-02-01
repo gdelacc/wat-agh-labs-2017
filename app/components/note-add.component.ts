@@ -31,7 +31,8 @@ export class NoteAddComponent implements OnInit{
 
        this._noteService.addNote(this.note).subscribe(
            response => {
-
+               console.log(response);
+               this._router.navigate(['/']);
            },
            error => {
                     this.errorMsg.Message = <any>error;

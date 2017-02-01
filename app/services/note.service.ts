@@ -26,8 +26,8 @@ export class NoteService{
     addNote(note:Note) {
         let json = JSON.stringify(note);
         let params = json;
-        let headers = new Headers('Content-Type':'application/json');
+        let headers = new Headers({'Content-Type':'application/json'});
 
-        return this._http.post(this.url+'note', params. {headers: headers});
+        return this._http.post(this.url+'notes/create', params, {headers: headers});
     }
 }

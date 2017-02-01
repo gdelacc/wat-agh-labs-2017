@@ -27,8 +27,8 @@ var NoteService = (function () {
     NoteService.prototype.addNote = function (note) {
         var json = JSON.stringify(note);
         var params = json;
-        var headers = new http_1.Headers('Content-Type', 'application/json');
-        return this._http.post(this.url + 'note', params., { headers: headers });
+        var headers = new http_1.Headers({ 'Content-Type': 'application/json' });
+        return this._http.post(this.url + 'notes/create', params, { headers: headers });
     };
     return NoteService;
 }());

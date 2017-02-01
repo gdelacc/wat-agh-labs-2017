@@ -26,6 +26,8 @@ var NoteAddComponent = (function () {
         var _this = this;
         console.log(this.note);
         this._noteService.addNote(this.note).subscribe(function (response) {
+            console.log(response);
+            _this._router.navigate(['/']);
         }, function (error) {
             _this.errorMsg.Message = error;
             if (_this.errorMsg != null) {
