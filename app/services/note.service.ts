@@ -17,4 +17,17 @@ export class NoteService{
         return this._http.get(this.url+'notes/')
                          .map(res => res.json());
     }
+
+    getNote(id: string) {
+        return this._http.get(this.url+'notes/'+id)
+                         .map(res => res.json());
+    }
+
+    addNote(note:Note) {
+        let json = JSON.stringify(note);
+        let params = json;
+        let headers = new Headers('Content-Type':'application/json');
+
+        return this._http.post(this.url+'note', params. {headers: headers});
+    }
 }

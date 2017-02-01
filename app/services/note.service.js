@@ -20,6 +20,16 @@ var NoteService = (function () {
         return this._http.get(this.url + 'notes/')
             .map(function (res) { return res.json(); });
     };
+    NoteService.prototype.getNote = function (id) {
+        return this._http.get(this.url + 'notes/' + id)
+            .map(function (res) { return res.json(); });
+    };
+    NoteService.prototype.addNote = function (note) {
+        var json = JSON.stringify(note);
+        var params = json;
+        var headers = new http_1.Headers('Content-Type', 'application/json');
+        return this._http.post(this.url + 'note', params., { headers: headers });
+    };
     return NoteService;
 }());
 NoteService = __decorate([

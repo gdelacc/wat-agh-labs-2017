@@ -1,9 +1,8 @@
 "use strict";
 var Note = (function () {
-    function Note(title, text, id) {
+    function Note(title, note_text) {
         this.title = title;
-        this.text = text;
-        this.id = id;
+        this.note_text = note_text;
     }
     return Note;
 }());

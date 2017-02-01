@@ -14,9 +14,10 @@ function createNote(req, res) {
     note.save((err, noteCreated) =>{
         if (err) {
             res.status(500).send({status:"Error during note creation"});
+        }else{
+            res.status(200).send({note:noteCreated});
         }
         
-        res.status(200).send({note:noteCreated});
     });
 }
 

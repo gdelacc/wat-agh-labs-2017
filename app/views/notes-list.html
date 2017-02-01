@@ -1,11 +1,11 @@
 
 <div class="container">
     <!--<strong>{{title}}</strong>-->
-    <button (click)="newNote()" class="btn">New Note</button>
+    <a class="btn" [routerLink]="['/new/']">New Note</a>
     
     <ul id="notes-list">
         <li *ngFor="let note of notes" class="note-item">
-            <a href="/note/{{note._id}}"><h4>{{note.title}}</h4></a>
+            <a [routerLink]="['/note', note._id]"><h4>{{note.title}}</h4></a>
             <p class="buttons">
                 <a class="btn edit" href="/note/{{note._id}}">Edit note</a>
                 <a class="btn delete" href="/note/{{note._id}}">Delete note</a>

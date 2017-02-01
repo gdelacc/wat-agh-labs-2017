@@ -1,0 +1,10 @@
+<div class="container">
+    <h2>New note:</h2>
+    <form #formNotes="ngForm" (ngSubmit)="onSubmit()">
+        <input type="text" placeholder="Note title" name="title" #title="ngModel" [(ngModel)]="note.title" required><br>
+
+        <textarea placeholder="Note text" name="note_text" #note_text="ngModel" [(ngModel)]="note.note_text" required></textarea><br>
+
+        <input type="submit" value="Create it!">
+    </form>
+</div>

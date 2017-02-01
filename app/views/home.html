@@ -1,11 +1,12 @@
 <header>
-    <h2>{{app_title}}</h2>
+    <a href="/"><h2>{{app_title}}</h2></a>
     <p>{{description}}</p> 
     <div class="clearfix"></div>
 </header>
 
 <section id="main">
-    <notes-list></notes-list>
+    <!--<notes-list></notes-list>-->
+    <router-outlet></router-outlet>
     <div class="clearfix"></div>
 </section>
 
