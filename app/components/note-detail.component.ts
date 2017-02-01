@@ -36,6 +36,7 @@ export class NoteDetailComponent implements OnInit{
                 }*/
                 this.note = response.note;
                 console.log(response);
+                
                 if (!this.note) {
                     this._router.navigate(['/']);
                 }
