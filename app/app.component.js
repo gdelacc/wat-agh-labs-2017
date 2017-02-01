@@ -9,15 +9,16 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var core_1 = require("@angular/core");
 // Decorador component, indicamos en que etiqueta se va a cargar la plantilla
 var AppComponent = (function () {
-    // Clase del componente donde irán los datos y funcionalidades
     function AppComponent() {
+        this.app_title = 'WAT LABS 2016-17 - Notes Manager App';
+        this.description = 'Example SPA of a Notes Manager based on NodeJS, MongoDB & AngularJS';
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: '<h1>Hola mundo con Angular 2 !! victorroblesweb.es</h1>'
+        templateUrl: 'app/views/home.html'
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
